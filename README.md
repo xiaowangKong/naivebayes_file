@@ -1,0 +1,53 @@
+machine-learning
+naive bayes #c++ programing language
+**********************step1**************************
+you need to specify dir:the training data set file,
+                     the feature description file,
+                     the testing data set file,
+                     the result file
+in the source code main.cpp like this:
+    char featurename[] = "your training data set file";
+    char sourcename[] = "your feature description file";
+    char testname[] = "your testing data set file";
+    char predictResname[] = "your result file";
+**********************step2**************************
+you need to unify the formats of the files
+(1)the training data set and the testing data set files looks like this(Assuming that the data set contains x features):
+
+feature1_value,feature2_value,...,featurex_value,class
+...
+for example: for the dataset iris,the training data set file looks like:
+5.1,3.5,1.4,0.2,Iris-setosa
+4.7,3.2,1.3,0.2,Iris-setosa
+7.0,3.2,4.7,1.4,Iris-versicolor
+6.4,3.2,4.5,1.5,Iris-versicolor
+6.7,2.5,5.8,1.8,Iris-virginica
+7.2,3.6,6.1,2.5,Iris-virginica
+(2)feature data set file looks like this:
+feature_name1'\t'value11,value12,...,value1* //for discree feature
+feature_name2'\t'value21,value22,...,value2* //for discree feature
+feature_name3                                //for continuous feature
+feature_name4                                //for continuous feature
+...
+feature_namex'\t'valuex1,valuex2,...,valuex* //for discree feature
+label_name'\t'value1,value2,...value* //the last line is the classification
+
+for example: for the dataset iris,the feature description file looks like:
+sepalL
+sepalW
+petalL
+petalW
+class	Iris-setosa,Iris-versicolor,Iris-virginica
+
+(3) Run the project or debug using c++ compiler,get the result like this:
+=======================================================
+Summary                                                
+-------------------------------------------------------
+Correctly Classified Instances          :       27       90%
+Incorrectly Classified Instances        :       3       10%
+Total Classified Instances              :       30       
+=======================================================
+and the classfication result have been saved in the result file.
+
+
+
